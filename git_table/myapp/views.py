@@ -1,21 +1,24 @@
 from django.shortcuts import render
 import random
+import datetime as dt
 import os 
-def random1(request):
+def random1(request):    # Random calender
     weeks = ['', 'Mon', '', 'Wed', '', 'Fri', '']
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    days =[]
+    year = dt.datetime.now().year
+    days =  make_calender(year-1) 
+    list1 =[]
     for i in range(0,371,1):
         rand=  random.randint(0,4)
         if rand ==1:
-            days.append("rgb(209, 255, 200)")
+            list1.append([days[i][0],"rgb(209, 255, 200)",days[i][1]])
         elif rand ==2:
-            days.append("rgb(176, 255, 161)")
+            list1.append([days[i][0],"rgb(176, 255, 161)",days[i][1]])
         elif rand>2:
-            days.append("hsl(110, 100%, 70%)")
+            list1.append([days[i][0],"hsl(110, 100%, 70%)",days[i][1]])
         else:
-            days.append("rgb(220, 220, 220)")
-    return render(request,'index.html',{"param1":weeks,"param2":months,"param3":days})
+            list1.append([days[i][0],"rgb(220, 220, 220)",days[i][1]])
+    return render(request,'index.html',{"param1":weeks,"param2":months,"param3":list1})
 
 
 def home(request):
@@ -39,7 +42,7 @@ def make_calender(year):
     return combine
 
 def git_calender_prep():
-    content = make_calender(2022)
+    content = make_calender(year = dt.datetime.now().year-1)
     list1 =[]
     list2 =[]
     dates =[]

@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-from myapp.views import home
+from myapp.views import home,random1
+urlpatterns.append(path('random',random1))
 urlpatterns.append(path('',home))

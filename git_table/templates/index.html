@@ -38,11 +38,11 @@
                 <th></th>
                 <th colspan="3">{{param2.11}}</th>
                 {% for W in param2 %}
-                {% if forloop.counter0|divisibleby:4%}
-                <th colspan="5" width=80>{{W}}</th>
-                {% else  %}
-                <th colspan="4" width=80>{{W}}</th>
-                {% endif %}
+                    {% if forloop.counter0|divisibleby:4%}
+                        <th colspan="5" width=80>{{W}}</th>
+                    {% else  %}
+                        <th colspan="4" width=80>{{W}}</th>
+                    {% endif %}
                 {% endfor %}
             </tr>
         </thead>
@@ -50,59 +50,59 @@
         <tr>
             <th>{{param1.0}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Sun" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Sun" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <th>{{param1.1}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Mon" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Mon" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
 
         </tr>
         <tr>
             <th>{{param1.2}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Tue" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Tue" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <th>{{param1.3}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Wed" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Wed" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <th>{{param1.4}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Thu" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Thu" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <th>{{param1.5}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Fri" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Fri" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <th>{{param1.6}}</th>
             {% for i in param3 %}
-            {% if i.2 == "Sat" %}
-                <td style="background-color: {{i.1}};"></td>
-            {% endif %}
-        {% endfor %}
+                {% if i.2 == "Sat" %}
+                    <td style="background-color: {{i.1}};"></td>
+                {% endif %}
+            {% endfor %}
         </tr>
         <tr>
             <td id="none"></td>
