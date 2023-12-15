@@ -27,7 +27,7 @@ def home(request):
 
 def make_calender(year):
     from datetime import date, timedelta
-    start_date = date(year, 1, 1)
+    start_date = date(year, 12, 11)
     day = []
     combine =[]
     months =['Jan','Feb','Mar','Apr','May',"Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
@@ -39,7 +39,7 @@ def make_calender(year):
     return combine
 
 def git_calender_prep():
-    content = make_calender(2023)
+    content = make_calender(2022)
     list1 =[]
     list2 =[]
     dates =[]
