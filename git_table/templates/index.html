@@ -41,16 +41,16 @@
         <tr>
             <th>{{param1.0}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|divisibleby:7 and not forloop.last %}
-                <td style="background-color:{{i}}"></td>
+            {% if i.2 == "Sun" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
-            {% endfor %}
+        {% endfor %}
         </tr>
         <tr>
             <th>{{param1.1}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-1"|divisibleby:7 %}
-                <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Mon" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
         {% endfor %}
 
@@ -58,40 +58,40 @@
         <tr>
             <th>{{param1.2}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-2"|divisibleby:7 %}
-            <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Tue" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
-        {% endfor %} 
+        {% endfor %}
         </tr>
         <tr>
             <th>{{param1.3}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-3"|divisibleby:7 %}
-            <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Wed" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
-        {% endfor %} 
+        {% endfor %}
         </tr>
         <tr>
             <th>{{param1.4}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-4"|divisibleby:7 %}
-            <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Thu" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
         {% endfor %}
         </tr>
         <tr>
             <th>{{param1.5}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-5"|divisibleby:7 %}
-            <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Fri" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
         {% endfor %}
         </tr>
         <tr>
             <th>{{param1.6}}</th>
             {% for i in param3 %}
-            {% if forloop.counter|add:"-6"|divisibleby:7 %}
-            <td style="background-color: {{i}};"></td>
+            {% if i.2 == "Sat" %}
+                <td style="background-color: {{i.1}};">{{i.0}}</td>
             {% endif %}
         {% endfor %}
         </tr>
