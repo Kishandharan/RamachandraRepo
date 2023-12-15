@@ -32,7 +32,7 @@ def make_calender(year):
     combine =[]
     months =['Jan','Feb','Mar','Apr','May',"Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     weeks = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun']
-    for i in range(365):
+    for i in range(371):
         day.append(start_date+timedelta(i))
     for d in day:
         combine.append([str(d.day)+"-"+months[d.month-1]+"-"+str(d.year),weeks[d.weekday()]])
